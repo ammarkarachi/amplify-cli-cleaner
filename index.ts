@@ -205,7 +205,6 @@ const deletAllBuckets =  async(account: { Id?: string }, s3: sdk.S3 ) => {
 
        try {
            await emptyBucket(bucket.Name, null, s3);
-           await s3.putBucketVersioning({ Bucket: '', VersioningConfiguration: {   Status: '' } }).promise();
            await deleteVersionMarkers(bucket.Name, null, s3);
            await s3.deleteBucket({ Bucket: bucket.Name }).promise();
            console.log(`Deleted `)

@@ -13,3 +13,7 @@ TODO
 * Cognito
 
 To run
+
+```bash
+ts-node index.ts
+```
